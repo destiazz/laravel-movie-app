@@ -13,7 +13,7 @@ Route::get('/movies', [MovieController::class, 'index']);
 
 Route::get('/genres', [GenreController::class,'index']);
 
-Route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/review', [ReviewController::class, 'index']);
 
 Route::get('/products', function () {
     return view('product');

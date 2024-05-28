@@ -6,12 +6,12 @@
         <!-- Breadcrumb Start -->
         <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                Genre Data
+                Review Data
             </h2>
 
             <nav>
                 <a
-                    href="/genres/create"
+                    href="/review/create"
                     class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                 >
                     Create
@@ -28,36 +28,54 @@
                     <div class="col-span-1 flex items-center">
                         <p class="font-medium">ID</p>
                     </div>
-                    <div class="col-span-1 flex items-center">
-                        <p class="font-medium">Name</p>                                                                                                                                                                                                                                                 
+                    <div class="col-span-2 flex items-center">
+                        <p class="font-medium">Movie</p>
                     </div>
-                    <div class="col-span-3 flex items-center">
-                        <p class="font-medium">Description</p>
+                    <div class="col-span-1 flex items-center">
+                        <p class="font-medium">User</p>
+                    </div>
+                    <div class="col-span-1 flex items-center">
+                        <p class="font-medium">Rating</p>
+                    </div>
+                    <div class="col-span-1 flex items-center">
+                        <p class="font-medium">Date</p>
                     </div>
                     <div class="col-span-1 flex items-center">
                         <p class="font-medium">Actions</p>
                     </div>
                 </div>
 
-                @foreach ($genres as $genre)
+                @foreach ($reviews as $review)
                 
                    <div class="grid grid-cols-7 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-9 md:px-6 2xl:px-7.5">
                     
                         <div class="col-span-1 flex items-center">
                             <p class="text-sm font-medium text-black dark:text-white">
-                                {{ $genre['id'] }}
+                                {{ $review->id }}
                             </p>
                         </div>
 
-                       <div class="col-span-1 flex items-center">
+                       <div class="col-span-2 flex items-center">
                             <p class="text-sm font-medium text-black dark:text-white">
-                                {{ $genre['name'] }} 
+                                {{ $review->movie_id }} 
                             </p>
                         </div>
 
-                        <div class="col-span-3 items-center sm:flex">
+                        <div class="col-span-1 items-center sm:flex">
                             <p class="text-sm font-medium text-black dark:text-white">
-                                {{ $genre['description'] }}
+                                {{ $review->user }}
+                            </p>
+                        </div>
+
+                        <div class="col-span-1 items-center sm:flex">
+                            <p class="text-sm font-medium text-black dark:text-white">
+                                {{ $review->rating }}
+                            </p>
+                        </div>
+
+                        <div class="col-span-1 items-center sm:flex">
+                            <p class="text-sm font-medium text-black dark:text-white">
+                                {{ $review->date }}
                             </p>
                         </div>
 
