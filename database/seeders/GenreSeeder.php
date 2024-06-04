@@ -14,8 +14,8 @@ class GenreSeeder extends Seeder
     public function run(): void
     {
         Genre::create([
-            'name' => 'Comedy',
-            'description' => 'Comedy film, or comedy drama sometimes known as dramedi (an abbreviation of the words drama and comedy) is a subgenre within the contemporary form of tragicomedy, especially on television, which combines elements of comedy and drama. This genre places characters in funny situations for the sake of humor. Comedy is often positioned as the opposite of tragedy.'
+            'name' => ' Shounen',
+            'description' => 'This genre often features adventure stories full of action, friendship, and character growth'
         ]);
 
         Genre::create([
@@ -24,8 +24,8 @@ class GenreSeeder extends Seeder
         ]);
 
         Genre::create([
-            'name' => 'Action',
-            'description' => 'Action films are usually characterized by fight choreography, fire explosions, gun shots, etc. In terms of story, action films usually tell the story of a character who has to risk his life. Because lives are at stake, its not surprising that there are lots of fights and shootouts between the characters.'
+            'name' => 'School',
+            'description' => 'This genre often features stories set in schools, interesting and lighthearted stories.'
         ]);
 
         Genre::create([
